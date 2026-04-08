@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 env:
-  IMAGE_NAME: registry.cn-hangzhou.aliyuncs.com/${{ secrets.ALIYUN_NAMESPACE }}/zzj-my-love-app
+  IMAGE_NAME: crpi-ihdocbq7asfzw2az.cn-hangzhou.personal.cr.aliyuncs.com/${{ secrets.ALIYUN_NAMESPACE }}/zzj-my-love-app
 
 jobs:
   build-and-push:
@@ -26,7 +26,7 @@ jobs:
       - name: 登录阿里云 ACR
         uses: docker/login-action@v3
         with:
-          registry: registry.cn-hangzhou.aliyuncs.com
+          registry: crpi-ihdocbq7asfzw2az.cn-hangzhou.personal.cr.aliyuncs.com
           username: ${{ secrets.ALIYUN_USERNAME }}
           password: ${{ secrets.ALIYUN_PASSWORD }}
 
